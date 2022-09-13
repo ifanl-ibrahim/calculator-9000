@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.cal-buttons {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.operats {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.cal-buttons div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.number button {
+    width: 60px;
+}
+
+.equals {
+    display: flex;
+}
