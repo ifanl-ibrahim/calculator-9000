@@ -1,0 +1,11 @@
+test format & length
+
+test content
+
+there are two separately timed sections of 100 question each.
+
+- section I: Listening
+	Examinees listen to a variety of questions and short conversations recorded in English, then answer questions based on what they heard.
+
+- section II: Reading
+	Examinees read a variety of materials and respond at their own pace/rythm to question based on the content. 
