@@ -1,7 +1,7 @@
 function BeautifulScreen() {
     return (
         <div className="BeautifulScreen">
-            <p>0</p>
+            <p>TEXT  123456789000</p>
         </div>
     );
 }

@@ -1,6 +1,6 @@
 function GreatOperationButton(props) {
   return (
-    <div className="number">
+    <div className="operate">
        <button> {props.valOperats} </button>
     </div>
   );

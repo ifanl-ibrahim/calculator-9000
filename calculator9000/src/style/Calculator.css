@@ -5,12 +5,39 @@ body {
     align-items: center;
 }
 
+.calculator9000 {
+    border: solid;
+    margin: 3vh;
+    padding: 3vh;
+    border-radius: 5%;
+    background: linear-gradient(#4c4c4c 0%, #222222 100%);
+    box-shadow: 0 17px 17px 0px rgb(0 0 0 / 80%);
+}
+
+.TheTitle {
+    color: #FFF;
+    margin-top: 0;
+    margin-bottom: 5vh;
+}
+
+.BeautifulScreen {
+    border: solid;
+    margin: 1.5vh;
+    padding: 1vh;
+    background: linear-gradient(rgb(70, 94, 23) 0%, rgb(110, 143, 43) 100%);
+    color: #404040;
+    border: #000 solid;
+    font-family: 'Silkscreen', cursive;
+    font-weight: bold;
+    color: #333333;
+}
+
 .cal-buttons {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto auto;
     column-gap: 5px;
-    row-gap: 5px;
+    margin-bottom: 5px;
+    margin-top: 5vh;
 }
 
 .numbers {
@@ -22,20 +49,36 @@ body {
 
 .operats {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
     column-gap: 5px;
     row-gap: 5px;
 }
 
-.cal-buttons div:last-child {
-    display: flex;
-    flex-direction: column;
-}
-
-.number button {
+button {
     width: 60px;
+    background: linear-gradient(#5F5F5F 0%, #404040 100%);
+    font-weight: bold;
+    padding: 7px 12px;
+    font-size: 20px;
+    text-shadow: 0 -1px 1px #000;
+    color: #FFF;
+    border-top: 1px solid #777;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .8);
 }
 
-.equals {
+.operate button {
+    background: linear-gradient(#b6b5b5 0%, #dfdfdf 100%);
+    color: #404040;
+}
+
+.equal button {
+    background: linear-gradient(#a37c12 0%, #c5a518 100%);
+    color: #404040;
+    width: 125px;
+}
+
+.specials {
     display: flex;
+    justify-content: end;
+    column-gap: 5px;
 }

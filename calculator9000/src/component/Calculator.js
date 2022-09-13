@@ -9,24 +9,24 @@ const tableNumber = [];
 const tableOperate = [];
 const tableEqual = [];
 
-const numbers = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0, ".", "AC"]
+const numbers = ["AC", "C", 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 numbers.map((number, index)=> (
   tableNumber.push(<AmazingNumberButton key={index} valNumber={number} />)
 ))
 
-const operats = ["/", "*", "-", "+"]
+const operats = ["/", "x", "-", "+"]
 operats.map((operate, index)=> (
   tableOperate.push(<GreatOperationButton key={index} valOperats={operate} />)
 ))
 
-const equals = ["SAVE", "="]
+const equals = ["="]
 equals.map((equal, index)=> (
   tableEqual.push(<MagnificientEqualButton key={index} valEquals={equal} />)
 ))
 
 function Calculator() {
   return (
-    <div className="calculator">
+    <div className="calculator9000">
       <TheTitle />
       <div className="cal-wrapper">
         <BeautifulScreen />
@@ -37,9 +37,9 @@ function Calculator() {
           <div className="operats">
             { tableOperate }
           </div>
-          <div className="equals">
-            { tableEqual }
-          </div>
+        </div>
+        <div className="specials">
+          { tableEqual }
         </div>
       </div>
     </div>

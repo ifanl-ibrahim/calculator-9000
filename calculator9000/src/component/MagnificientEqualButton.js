@@ -5,5 +5,5 @@ function MagnificientEqualButton(props) {
       </div>
     );
   }
-  
+
   export default MagnificientEqualButton;
