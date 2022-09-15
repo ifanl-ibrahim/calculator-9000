@@ -3,6 +3,7 @@
 function MagnificientEqualButton(props) {
 
     let equal = '=';
+    // let save = 'SAVE'
 
     const hundleResult = () => {
         props.hundleClickParent(equal)
