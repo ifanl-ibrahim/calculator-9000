@@ -1,9 +1,7 @@
-function BeautifulScreen() {
-    return (
-        <div className="BeautifulScreen">
-            <p>TEXT  123456789000</p>
-        </div>
-    );
-}
+import React from "react";
 
-export default BeautifulScreen;
+export default function BeautifulScreen(props) {
+    return (
+        <div className="screen"> {props.screenValue} </div>
+    )
+}

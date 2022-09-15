@@ -1,49 +1,54 @@
+/* eslint no-eval: 0 */
+
 import TheTitle from "./TheTitle";
 import AmazingNumberButton from "./AmazingNumberButton";
 import BeautifulScreen from "./BeautifulScreen";
 import GreatOperationButton from "./GreatOperationButton";
 import MagnificientEqualButton from "./MagnificientEqualButton";
+import ItSOverNineThousand from "./ItSOverNineThousand";
 import '../style/Calculator.css';
+import {useState} from "react"
 
-const tableNumber = [];
-const tableOperate = [];
-const tableEqual = [];
+export default function Calculator() {
 
-const numbers = ["AC", "C", 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
-numbers.map((number, index)=> (
-  tableNumber.push(<AmazingNumberButton key={index} valNumber={number} />)
-))
+  let [screen, setScreen] = useState('')
+  let [over9000, setOver] = useState('')
 
-const operats = ["/", "x", "-", "+"]
-operats.map((operate, index)=> (
-  tableOperate.push(<GreatOperationButton key={index} valOperats={operate} />)
-))
+  const hundleClick = (calcNumber) => {
+    setScreen(screen + calcNumber)
+    if (calcNumber === "AC") {
+      setScreen('')
+    }
+  };
 
-const equals = ["="]
-equals.map((equal, index)=> (
-  tableEqual.push(<MagnificientEqualButton key={index} valEquals={equal} />)
-))
+  const handleResult = (result) => {
+    if (result > 9000) {
+      setScreen(result)
+      setOver(over9000)
+    } else {
+      setScreen(result)
+      setOver('')
+    }
+  }
 
-function Calculator() {
   return (
     <div className="calculator9000">
       <TheTitle />
       <div className="cal-wrapper">
-        <BeautifulScreen />
+        <BeautifulScreen screenValue= {screen}/>
+        <ItSOverNineThousand overValue= {screen} handleResultParent={handleResult}/>
         <div className="cal-buttons">
           <div className="numbers">
-            { tableNumber }
+            <AmazingNumberButton hundleClickParent={hundleClick} />
           </div>
           <div className="operats">
-            { tableOperate }
+            <GreatOperationButton hundleClickParent={hundleClick} />
           </div>
         </div>
         <div className="specials">
-          { tableEqual }
+          <MagnificientEqualButton equal={screen} hundleClickParent={handleResult}/>
         </div>
       </div>
     </div>
   );
 }
-
-export default Calculator;

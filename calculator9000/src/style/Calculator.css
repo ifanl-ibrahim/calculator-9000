@@ -20,10 +20,10 @@ body {
     margin-bottom: 5vh;
 }
 
-.BeautifulScreen {
+.screen {
     border: solid;
-    margin: 1.5vh;
-    padding: 1vh;
+    /* margin: 1.5vh; */
+    padding: 4vh;
     background: linear-gradient(rgb(70, 94, 23) 0%, rgb(110, 143, 43) 100%);
     color: #404040;
     border: #000 solid;
@@ -40,14 +40,18 @@ body {
     margin-top: 5vh;
 }
 
-.numbers {
+.number {
     display: grid;
     grid-template-columns: auto auto auto;
     column-gap: 5px;
     row-gap: 5px;
 }
 
-.operats {
+.nine-thounsand {
+    color: darkred;
+}
+
+.operation {
     display: grid;
     grid-template-rows: auto;
     column-gap: 5px;
@@ -66,7 +70,7 @@ button {
     box-shadow: 0 2px 6px rgba(0, 0, 0, .8);
 }
 
-.operate button {
+.operation button {
     background: linear-gradient(#b6b5b5 0%, #dfdfdf 100%);
     color: #404040;
 }

@@ -1,9 +1,21 @@
+/* eslint no-eval: 0 */
+
 function MagnificientEqualButton(props) {
+
+    let equal = '=';
+
+    const hundleResult = () => {
+        props.hundleClickParent(equal)
+    };
+
     return (
       <div className="equal">
-         <button> {props.valEquals} </button>
+        <button onClick={() => {
+            equal = eval(props.equal)
+            hundleResult()
+        }}> = </button>
       </div>
-    );
-  }
+    )
+}
 
-  export default MagnificientEqualButton;
+export default MagnificientEqualButton;
