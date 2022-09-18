@@ -5,7 +5,7 @@ function GreatOperationButton(props) {
   const tableOperats = ['+', '-', '*', '/'];
   let operat = '';
 
-  const hundleClick = () => {
+  const hundleClick = () => { //fonction qui va récupéré l'information qui est dans calculator evoyer via hundleClickParent
     props.hundleClickParent(operat)
   };
 

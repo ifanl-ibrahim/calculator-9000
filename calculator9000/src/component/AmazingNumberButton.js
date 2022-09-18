@@ -5,7 +5,7 @@ const AmazingNumberButton = (props) => {
   const tableNumbers = ["AC", 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, "."];
   let numbers = '';
 
-  const hundleClick = () => {
+  const hundleClick = () => { //fonction qui va récupéré l'information qui est dans calculator evoyer via hundleClickParent
     props.hundleClickParent(numbers)
   };
 

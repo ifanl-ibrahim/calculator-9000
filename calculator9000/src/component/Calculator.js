@@ -7,17 +7,16 @@ import GreatOperationButton from "./GreatOperationButton";
 import MagnificientEqualButton from "./MagnificientEqualButton";
 import ItSOverNineThousand from "./ItSOverNineThousand";
 import '../style/Calculator.css';
-import {useState} from "react"
+import {useState} from "react" //importation de la fonction useState de réact
 
 export default function Calculator() {
 
-  let [screen, setScreen] = useState('')
-  let [over9000, setOver] = useState(false)
-  let calc = [];
-  let resultat = [];
+  let [screen, setScreen] = useState('') // variable qui l'état de mon écran
+  let [over9000, setOver] = useState(false) // variable qui l'état de mon over
+  let calc = []; // tableau qui contient mon opération
+  let resultat = []; // tableau qui contient mon résultat
 
-  console.log(over9000)
-  const hundleClick = (calcNumber) => {
+  const hundleClick = (calcNumber) => { //fonction pour géré mes boutton vers l'écran
     setScreen(screen + calcNumber)
     if (calcNumber === "AC") {
       setOver(false)
@@ -27,15 +26,29 @@ export default function Calculator() {
     console.log(calc)
   }
 
-  const handleResult = (result) => {
+  const handleResult = (result) => {  //fonction pour géré mes resultat vers l'écran
     if (result > 9000) {
       setOver(true)
+      setScreen(result)
+      resultat.push(resultat)
+
     } else {
       setScreen(result)
       setOver(false)
       resultat.push(result)
+      console.log(resultat)
     }
   }
+
+  // fetch('./api/dataBase.php'{
+  //   method : 'POST',
+  //   body : JSON.stringify({
+  //     search : search.value
+  //   }),
+  //   Headers : {
+  //     "Content-type" : "application/json; charset=UTF-8"
+  //   }
+  // })
 
   return (
     <div>
@@ -54,7 +67,7 @@ export default function Calculator() {
           </div>
           <div className="specials">
             <button className="save" onClick={() => {
-            
+
             }}>SAVE</button>
             <MagnificientEqualButton equal={screen} hundleClickParent={handleResult} />
           </div>

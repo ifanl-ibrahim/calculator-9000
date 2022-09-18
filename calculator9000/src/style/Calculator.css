@@ -22,13 +22,14 @@ body {
 
 .screen {
     /* margin: 1.5vh; */
-    padding: 4vh;
+    padding: 2vh;
     background: linear-gradient(rgb(70, 94, 23) 0%, rgb(110, 143, 43) 100%);
     border: #000 solid;
     font-family: 'Silkscreen', cursive;
     font-weight: bold;
     color: #333333;
     border-bottom: solid rgb(110, 143, 43);
+    font-size: 30px;
 }
 
 p {
@@ -39,6 +40,7 @@ p {
     border-top: solid rgb(110, 143, 43);
     background: rgb(110, 143, 43);
     font-family: 'Silkscreen', cursive;
+    font-size: 20px;
 }
 
 .cal-buttons {
