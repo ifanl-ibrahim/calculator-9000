@@ -7,12 +7,13 @@ import GreatOperationButton from "./GreatOperationButton";
 import MagnificientEqualButton from "./MagnificientEqualButton";
 import ItSOverNineThousand from "./ItSOverNineThousand";
 import '../style/Calculator.css';
-import {useState} from "react" //importation de la fonction useState de réact
+import {useEffect, useState} from "react" //importation de la fonction useState de réact
 
 export default function Calculator() {
 
   let [screen, setScreen] = useState('') // variable qui l'état de mon écran
   let [over9000, setOver] = useState(false) // variable qui l'état de mon over
+  let [data, setData] = useState("loading ...") // variable qui l'état de ma data
   let calc = []; // tableau qui contient mon opération
   let resultat = []; // tableau qui contient mon résultat
 
@@ -40,10 +41,17 @@ export default function Calculator() {
     }
   }
 
-  // fetch('./api/dataBase.php'{
+  useEffect(() => {
+    async function loadData() {
+      var response = await fetch('../api/dataBase.php');
+      var res = await response.json();
+      setData("datas loaded: "+res.operation+res.resultat)
+    }
+    loadData()
+  }, [])
+  // fetch('./api/dataBase.php', {
   //   method : 'POST',
   //   body : JSON.stringify({
-  //     search : search.value
   //   }),
   //   Headers : {
   //     "Content-type" : "application/json; charset=UTF-8"
